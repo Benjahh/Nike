@@ -15,10 +15,15 @@ const Nav = () => {
               <a
                 className="font-montserrat leading-normal text-lg text-slate-gray"
                 href={items.href}
-              ></a>
+              >
+                {items.label}
+              </a>
             </li>
           ))}
         </ul>
+        <div className="hidden max-lg:block">
+          <img src={hamburger} alt="Hamburger" width={25} height={25}></img>
+        </div>
       </nav>
     </header>
   );
