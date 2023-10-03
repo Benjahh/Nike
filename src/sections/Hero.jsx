@@ -1,6 +1,8 @@
 import { arrowRight } from '../assets/icons';
+import { bigShoe1 } from '../assets/images';
 import Button from '../components/Button';
-import { statistics } from '../constants';
+import ShoeCard from '../components/ShoeCard';
+import { statistics, shoes } from '../constants';
 
 const Hero = () => {
   return (
@@ -17,9 +19,10 @@ const Hero = () => {
             The New Arrival
           </span>
           <br />
-          <span>Nike Shoes</span>
+          <span className="text-coral-red inline-block mt-3">Nike </span>
         </h1>
-        <p>
+        Shoes
+        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
@@ -27,8 +30,27 @@ const Hero = () => {
         <div className="flex justify-start items-start flex-wrap mt-20 w-full gap-16 ">
           {statistics.map((stats) => (
             <div key={stats.label}>
-              <p>{stats.value}</p>
-              <p>{stats.label}</p>
+              <p className="text-4xl font-palanquin font-bold">{stats.value}</p>
+              <p className="leading-7 font-montserrat text-slate-gray">
+                {stats.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative flex-1 flex justify-center items-center max-xl:py-40 bg-primary bg-hero bg-center bg-cover xl:min-h-screen ">
+        <img
+          src={bigShoe1}
+          className="object-contain relative z-10 "
+          width={610}
+          height={500}
+          alt="shoe colection"
+        />
+        <div>
+          {shoes.map((shoe) => (
+            <div key={shoe}>
+              <ShoeCard />
             </div>
           ))}
         </div>
