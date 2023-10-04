@@ -1,14 +1,15 @@
-import Nav from './components/Nav';
+import { Nav } from './components';
 import {
+  CustomerReviews,
+  Footer,
   Hero,
   PopularProducts,
-  Footer,
-  CustomerReviews,
-  SuperQuality,
   Services,
-  SpecialOffers,
+  SpecialOffer,
   Subscribe,
-} from './sections/index';
+  SuperQuality,
+} from './sections';
+
 const App = () => {
   return (
     <main className="relative">
@@ -26,15 +27,15 @@ const App = () => {
         <Services />
       </section>
       <section className="padding">
-        <SpecialOffers />
+        <SpecialOffer />
       </section>
-      <section className="padding bg-pale-blue">
+      <section className="bg-pale-blue padding">
         <CustomerReviews />
       </section>
       <section className="padding-x sm:py-32 py-16 w-full">
         <Subscribe />
       </section>
-      <section className="bg-black padding-t padding-x pb-8">
+      <section className=" bg-black padding-x padding-t pb-8">
         <Footer />
       </section>
     </main>
